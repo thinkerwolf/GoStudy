@@ -40,8 +40,8 @@ func main() {
 	function.FuncAnony()
 	function.Debug()
 	
-	// 数组
-	array.ArrayFunc();
-	
+	// 数组和切片
+	array.ArrayFunc()
+	array.SliceFunc()
 	
 }
