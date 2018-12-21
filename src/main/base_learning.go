@@ -1,11 +1,14 @@
 package main
 
+
 import (
 	"fmt"
 	"runtime"
 	"function"
 	"array"
 	"base"
+	"struction"
+	"concurrent"
 )
 
 var prompt = "Enter a digit, e.g. 3 " + "or %s to quit."
@@ -19,7 +22,7 @@ func init() {
 	fmt.Println(prompt)
 }
 
-func main() {
+func BaseLearning() {
 	fmt.Println("Hello, GO!")
 	
 	base.Tim()
@@ -44,4 +47,14 @@ func main() {
 	array.ArrayFunc()
 	array.SliceFunc()
 	
+	struction.TestStruct()
+	struction.AnnomyStruct()
+	struction.TestInterface()
+	struction.Reflection()
+	
+	concurrent.GoRoutine()
+	concurrent.Channel()
+	concurrent.BufferedChannel()
+	
+	concurrent.SelectChannel()
 }

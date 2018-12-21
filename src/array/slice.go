@@ -15,12 +15,12 @@ func SliceFunc() {
 	fmt.Printf("Slice1 len is %d, cap is %d\n", len(slice1), cap(slice1))
 	sliceTest1(slice1)
 	fmt.Println(slice1)
-	
+
 	var arrLazy = [...]string{"Tom", "Jack", "Mary", "LiMing"}
 	var slice2 = arrLazy[0:3]
 	fmt.Println(slice2)
 	fmt.Printf("Slice2 len is %d, cap is %d\n", len(slice2), cap(slice2)) // len 3, cap 4
-	
+
 	createSlice()
 }
 
@@ -32,17 +32,14 @@ func createSlice() {
 	// 创建一个长度50，容量为100的切片
 	// make([]type, len, cap)
 	var sliceMake = make([]int, 50, 100)
-	
+
 	// make([cap]type[x:y])
 	var sliceNew = new([100]int)[0:50]
-	
+
 	fmt.Println("sliceMake : ", sliceMake)
 	fmt.Println("sliceNew : ", sliceNew)
-	
-	
+
 	var p *[]int = new([]int)
 	fmt.Println(p)
-	
+
 }
-
-
