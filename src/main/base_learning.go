@@ -2,6 +2,7 @@ package main
 
 
 import (
+	"os"
 	"fmt"
 	"runtime"
 	"function"
@@ -20,6 +21,11 @@ func init() {
 		prompt = fmt.Sprintf(prompt, "Ctrl+D")
 	}
 	fmt.Println(prompt)
+}
+
+func readFile() {
+	
+os.Open("");
 }
 
 func BaseLearning() {

@@ -1,10 +1,12 @@
 package main
 
 import (
-	"web"
+	//"web"
+	"databasing"
 )
 
 func main() {
 	//BaseLearning();
-	web.StartSimplerServer()
+	//web.StartSimplerServer()
+	databasing.MysqlDatabase()
 }
