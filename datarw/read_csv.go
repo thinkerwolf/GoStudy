@@ -27,12 +27,22 @@ func ReadProducts() {
 			break
 		}
 		ss := strings.Split(line, ";")
-		price, _ := strconv.ParseFloat(ss[1], 64)
-		quantity, _ := strconv.ParseInt(strings.Replace(ss[2], "\n", "", -1), 0, 64)
+		price, parseErr1 := strconv.ParseFloat(ss[1], 64)
+		if parseErr1 != nil {
+			fmt.Println(parseErr1)
+			break
+		}
+
+		quantity, parseErr2 := strconv.Atoi(strings.Replace(ss[2], "\r\n", "", -1))
+		if parseErr2 != nil {
+			fmt.Println(parseErr2)
+			break
+		}
+
 		p := Product{
 			Title:    ss[0],
 			Price:    price,
-			Quantity: int(quantity)}
+			Quantity: quantity}
 		el.PushFront(p)
 	}
 
