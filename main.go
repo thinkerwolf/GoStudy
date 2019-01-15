@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
 	"runtime"
 
 	"github.com/GoStudy/array"
 	"github.com/GoStudy/base"
 	"github.com/GoStudy/concurrent"
+	"github.com/GoStudy/datarw"
 	"github.com/GoStudy/function"
 	"github.com/GoStudy/gopackage"
 	mapTest "github.com/GoStudy/map_test"
@@ -31,6 +31,9 @@ func main() {
 	fmt.Println("============ standard lib ============")
 	StandardLibrary()
 
+	fmt.Println("============ read write data ============")
+	ReadWriteData()
+
 }
 
 var prompt = "Enter a digit, e.g. 3 " + "or %s to quit."
@@ -42,11 +45,6 @@ func init() {
 		prompt = fmt.Sprintf(prompt, "Ctrl+D")
 	}
 	fmt.Println(prompt)
-}
-
-func readFile() {
-
-	os.Open("")
 }
 
 func BaseLearning() {
@@ -99,4 +97,9 @@ func MapTest() {
 func StandardLibrary() {
 	gopackage.AList()
 	gopackage.UnSafe()
+}
+
+func ReadWriteData() {
+	//datarw.ReadFile()
+	datarw.ReadProducts()
 }
