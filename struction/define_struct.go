@@ -33,9 +33,9 @@ func TestStruct() {
 }
 
 type Human struct {
-	name   string
-	age    int
-	weight int
+	Name   string
+	Age    int
+	Weight int
 }
 
 type Student struct {
@@ -48,14 +48,37 @@ type GoodStudent struct {
 	good bool
 }
 
+func NewHuman(name string, age int, weight int) *Human {
+	return &Human{Name: name, Age: age, Weight: weight}
+}
+
+// Human 实现 Man接口
+func (h Human) SayHi() {
+	fmt.Println(h.Name, " is saying hello")
+}
+
+// Human 实现 Man接口
+func (h Human) Sing(s string) {
+	fmt.Println(h.Name, " is saying a song named ", s)
+}
+
+func TestInterface() {
+	var man Man
+	man = Human{Name: "Bruce", Age: 46, Weight: 180}
+
+	man.SayHi()
+	man.Sing("Yesterday")
+
+}
+
 func AnnomyStruct() {
-	// 我们初始化一个学生	
+	// 我们初始化一个学生
 	mark := GoodStudent{Student{Human{"Mark", 25, 120}, "Computer Science"}, true}
-	
+
 	// 我们访问相应的字段
-	fmt.Println("His name is ", mark.name)
-	fmt.Println("His age is ", mark.age)
-	fmt.Println("His weight is ", mark.weight)
+	fmt.Println("His name is ", mark.Name)
+	fmt.Println("His age is ", mark.Age)
+	fmt.Println("His weight is ", mark.Weight)
 	fmt.Println("His speciality is ", mark.speciality)
 	// 修改对应的备注信息
 	mark.speciality = "AI"
@@ -63,12 +86,10 @@ func AnnomyStruct() {
 	fmt.Println("His speciality is ", mark.speciality)
 	// 修改他的年龄信息
 	fmt.Println("Mark become old")
-	mark.age = 46
-	fmt.Println("His age is", mark.age)
+	mark.Age = 46
+	fmt.Println("His age is", mark.Age)
 	// 修改他的体重信息
 	fmt.Println("Mark is not an athlet anymore")
-	mark.weight += 60
-	fmt.Println("His weight is", mark.weight)
-	
-	
+	mark.Weight += 60
+	fmt.Println("His weight is", mark.Weight)
 }
