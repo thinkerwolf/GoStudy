@@ -1,9 +1,9 @@
 package main
 
 import (
-	//"web"
-	"databasing"
-	mapTest "map_test"
+	//"github.com/GoStudy/web"
+	"github.com/GoStudy/databasing"
+	mapTest "github.com/GoStudy/map_test"
 )
 
 func main() {

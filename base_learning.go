@@ -5,11 +5,11 @@ import (
 	"os"
 	"fmt"
 	"runtime"
-	"function"
-	"array"
-	"base"
-	"struction"
-	"concurrent"
+	"github.com/GoStudy/function"
+	"github.com/GoStudy/array"
+	"github.com/GoStudy/base"
+	"github.com/GoStudy/struction"
+	"github.com/GoStudy/concurrent"
 )
 
 var prompt = "Enter a digit, e.g. 3 " + "or %s to quit."
