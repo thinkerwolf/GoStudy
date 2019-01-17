@@ -102,4 +102,7 @@ func StandardLibrary() {
 func ReadWriteData() {
 	//datarw.ReadFile()
 	datarw.ReadProducts()
+	datarw.ReadProducts2()
+	datarw.ReadGzipFile()
+	datarw.SaveLoadPage()
 }
