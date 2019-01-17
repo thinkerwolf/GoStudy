@@ -17,6 +17,9 @@ type Page struct {
 func Save(page Page) error {
 	fileName := page.Title + ".txt"
 	file, err := os.OpenFile(fileName, os.O_CREATE|os.O_WRONLY, 0666)
+
+	defer file.Close()
+
 	if err != nil {
 		return err
 	}
@@ -30,6 +33,7 @@ func Save(page Page) error {
 func Load(title string) (*Page, error) {
 	fileName := title + ".txt"
 	file, err := os.Open(fileName)
+	defer file.Close()
 	if err != nil {
 		return nil, err
 	}
