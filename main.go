@@ -105,4 +105,8 @@ func ReadWriteData() {
 	datarw.ReadProducts2()
 	datarw.ReadGzipFile()
 	datarw.SaveLoadPage()
+	datarw.StartArgs()
+	datarw.ObjToJSON()
+	datarw.JSONToObj()
+	datarw.ReadXml()
 }
