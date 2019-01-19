@@ -109,4 +109,6 @@ func ReadWriteData() {
 	datarw.ObjToJSON()
 	datarw.JSONToObj()
 	datarw.ReadXml()
+	datarw.GobEncodeOrDecode()
+	datarw.GobFile()
 }
